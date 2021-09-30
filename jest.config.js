@@ -13,7 +13,7 @@ module.exports = {
   //collectCoverage: true,
   collectCoverageFrom: ['**/*.(t|j)s'],
   coverageDirectory: './coverage',
-  coveragePathIgnorePatterns: ['node_modules', 'node_modules/*', 'dist', 'dist/*', 'src/index.ts'],
+  coveragePathIgnorePatterns: ['node_modules', 'node_modules/*', 'dist', 'dist/*', 'src/index.ts', 'src/dynamicModules.ts'],
   testEnvironment: 'node',
   setupFilesAfterEnv: ['jest-extended'],
   moduleDirectories: ['node_modules'],
