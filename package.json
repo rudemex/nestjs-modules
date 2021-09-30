@@ -1,7 +1,7 @@
 {
-  "name": "nestjs-package-starter",
-  "version": "1.0.4",
-  "description": "NestJS npm package starter",
+  "name": "nestjs-modules",
+  "version": "0.0.1",
+  "description": "NestJS modules",
   "author": {
     "name": "Maximiliano \"Mex\" Delgado",
     "email": "mdelgado@tresdoce.com.ar",
@@ -18,13 +18,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rudemex/nestjs-package-starter.git"
+    "url": "git+https://github.com/rudemex/nestjs-modules.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rudemex/nestjs-package-starter/issues"
+    "url": "https://github.com/rudemex/nestjs-modules/issues"
   },
-  "homepage": "https://github.com/rudemex/nestjs-package-starter#readme",
+  "homepage": "https://github.com/rudemex/nestjs-modules#readme",
   "scripts": {
     "clean": "shx rm -rf pkg",
     "prebuild": "npm run clean",
@@ -113,7 +113,7 @@
   "@pika/pack": {
     "pipeline": [
       [
-        "@pika/plugin-standard-pkg",
+        "@pika/plugin-ts-standard-pkg",
         {
           "exclude": [
             "**/__test__/*"
