@@ -33,7 +33,7 @@
     "pre-commit": "lint-staged",
     "publish": "pika publish",
     "version": "npm run build",
-    "test": "jest --runInBand --detectOpenHandles --coverage"
+    "test": "jest --runInBand --passWithNoTests --detectOpenHandles --coverage"
   },
   "peerDependencies": {
     "@nestjs/common": "^8.0.6",
@@ -43,6 +43,7 @@
     "rxjs": "^7.3.0"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "shx": "^0.3.3"
   },
   "devDependencies": {
@@ -101,7 +102,7 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged",
-      "pre-push": "jest"
+      "pre-push": "jest --passWithNoTests"
     }
   },
   "lint-staged": {
