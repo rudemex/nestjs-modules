@@ -41,7 +41,7 @@ export function createModuleConfigProvider<T>(
     },
     inject: [
       options.useClass ||
-        get(options, 'useExisting.provide', (options.useExisting as any).value.constructor.name),
+      get(options, 'useExisting.provide', (options.useExisting as any).value.constructor.name),
     ],
   };
 
@@ -69,7 +69,7 @@ export function createModuleConfigProvider<T>(
 }
 
 export interface IConfigurableDynamicRootModule<T, U> {
-  new (): Type<T>;
+  new(): Type<T>;
 
   moduleSubject: Subject<DynamicModule>;
 
@@ -82,9 +82,7 @@ export interface IConfigurableDynamicRootModule<T, U> {
 
 export function createConfigurableDynamicRootModule<T, U>(
   moduleConfigToken: InjectionToken,
-  moduleProperties: Partial<
-    Pick<ModuleMetadata, 'imports' | 'exports' | 'providers' | 'controllers'>
-  > = {
+  moduleProperties: Partial<Pick<ModuleMetadata, 'imports' | 'exports' | 'providers' | 'controllers'>> = {
     imports: [],
     exports: [],
     providers: [],
@@ -137,7 +135,7 @@ export function createConfigurableDynamicRootModule<T, U>(
         first(),
         map(() => {
           throw new Error(
-            `Expected ${moduleCtor.name} to be configured by at last one Module but it was not configured within ${wait}ms`,
+            `Expected ${moduleCtor.name} to be configured by at last one Module but it was not configured within ${wait}ms.`,
           );
         }),
       );
